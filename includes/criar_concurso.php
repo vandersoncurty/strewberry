@@ -1,5 +1,5 @@
 <div>
-    <form method="POST" action="add_concurso" name="criar_concurso">
+    <form method="POST" action="../db/add_concurso.php" name="criar_concurso">
     <h2>Dados básicos:</h2>
         <label for="name">Nome do evento:</label>
         <input type="text" name="name" required>
@@ -26,6 +26,6 @@
         <div id="staff_container">
         </div>
         <button type="button" onclick="addMember()">Adicionar Membro</button>
-        <button type="submit">Enviar</button>
+        <button type="submit">Criar</button>
     </form>
 </div>

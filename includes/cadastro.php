@@ -1,6 +1,6 @@
 <div>
     <h1>Cadastro</h1>
-    <form method="POST" action="includes/new_user_auth.php" name="cadastro">
+    <form method="POST" action="../db/new_user_auth.php" name="cadastro">
         <label for="name">Nome:</label>
         <input type="text" name="name">
 

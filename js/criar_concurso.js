@@ -5,11 +5,11 @@ function addMember() {
   container.innerHTML = 
     `
     <label for="email">E-mail:</label>
-    <input type="email" name="email" required>
+    <input type="email" name="emails" required>
     
     <label>Função:</label>
-    <label><input type="checkbox" name="permissions[${getNextMemberIndex()}]">Jurado</label>
-    <label><input type="checkbox" name="permissions[${getNextMemberIndex()}]">DJ/MC</label>
+    <label><input type="radio" name="permissions[${getNextMemberIndex()}]" value="jurado">Jurado</label>
+    <label><input type="radio" name="permissions[${getNextMemberIndex()}]" value="djmc">DJ/MC</label>
 
     <button type="button" onclick="removeMember(this)">Remover</button>
     `;

@@ -1,6 +1,6 @@
     <div>
         <h1>Bem vindo!</h1>
-        <form name="login" method="POST" action="includes/auth.php">
+        <form name="login" method="POST" action="db/auth.php">
             <label for="email">E-mail:</label>
             <input type="email" name="email" required><br/>
             <label for="password">Senha:</label>
