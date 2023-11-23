@@ -11,6 +11,7 @@
     <body>
         <div id="content">
         <?php
+		//conteudo das páginas XmlHTTPRequest
         if (isset($_GET['page'])) {
             include($_GET['page'] . '.php');
         } else {
