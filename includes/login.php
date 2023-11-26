@@ -1,6 +1,6 @@
 <div>
     <h1>Bem vindo!</h1>
-    <form name="login" method="POST" action="../db/auth.php">
+    <form name="login" method="POST" action="db/auth.php">
         <label for="email">E-mail:</label>
         <input type="email" name="email" required><br/>
         <label for="password">Senha:</label>
@@ -14,7 +14,7 @@ $error_message = isset($_GET['error']) ? $_GET['error'] : '';
 if ($error_message == '1') {
     echo '<p class="error-message">Usuário ou senha incorretos.</p>';
 } elseif ($error_message == '3') {
-    echo '<p class="error-message">E-mail já cadastrado!</p>';
+    echo '<p class="error-message">E-mail já cadastrado! Faça login</p>';
 }
 ?>
 </div>

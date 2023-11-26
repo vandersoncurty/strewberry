@@ -13,15 +13,18 @@
         <label for="rules">Regulamento:</label>
         <input type="text" name="rules">
 
-        <label for="event_date">Data do concurso:</label>
-        <input type="date" name="event_date">
+        <!--<label for="event_date">Data do concurso:</label>
+        <input type="date" name="event_date">-->
 
         <label for="final_date">Encerramento das inscrições:</label>
         <input type="datetime" name="final_date">
 
-        <label for="max_competitors">Número máximo de participantes:</label>
-        <input type="number" name="max_competitors">
+        <!--<label for="max_competitors">Número máximo de participantes:</label>
+        <input type="number" name="max_competitors">-->
         
+        <label for="categories">Encerramento das inscrições:</label>
+        <input type="varchar" name="categories">
+
         <h2>Staff:</h2>
         <div id="staff_container">
         </div>
