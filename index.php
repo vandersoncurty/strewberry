@@ -5,7 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Strewberry</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='/css/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
     <script src='js/main.js'></script>
     </head>
     <body>
@@ -18,6 +18,10 @@
             include('includes/login.php');
         }
         ?>
+        </div>
+        <div>
+            <img scr="img/naruto_equipe.png" id="imagem_login">
+        
         </div>
     </body>
 
