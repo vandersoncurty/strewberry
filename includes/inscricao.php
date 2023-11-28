@@ -9,31 +9,49 @@
     <script src='../js/main.js'></script>
 </head>
 <body>
+
+    <?php
+    include('../utils/functions.php');
+    include('../db/conn.php');
+    
+    $concursoId = $_GET['id'];
+    $concurso = getConcurso($concursoId, $conn);
+    ?>
+
     <form method="POST" action="../db/add_inscricao.php" enctype="multipart/form-data" name="registration">
-        <label for="name">Nome completo:</label>
-        <input type="text" name="name" required>
 
-        <label for="artistic_name">Nome artístico:</label>
-        <input type="text" name="artistic_name">
+        <div>
+            <h1><?php echo $concurso['nome']; ?></h1>
+            <p><?php echo $concurso['descricao']; ?></p>
+            <p>Saiba mais no instagram: <?php echo $concurso['instagram']; ?></p>
+            <h2>Regulamento</h2>
+            <p><?php echo $concurso['regulamento']; ?></p>
+        </div>
+        <div>
+            <input type="hidden" name="concurso_id" value="<?php echo $concursoId; ?>"
+            <label for="name">Nome completo:</label>
+            <input type="text" name="name" required>
 
-        <label for="instagram">Instagram:</label>
-        <input type="text" name="instagram">
+            <label for="artistic_name">Nome artístico:</label>
+            <input type="text" name="artistic_name">
 
-        <label for="character_name">Nome do personagem:</label>
-        <input type="text" name="character_name" required>
+            <label for="instagram">Instagram:</label>
+            <input type="text" name="instagram">
 
-        <label for="character_source">Fonte do personagem:</label>
-        <input type="text" name="character_source" required>
+            <label for="character_name">Nome do personagem:</label>
+            <input type="text" name="character_name" required>
 
-        <label for="image">Imagem de referência:</label>
-        <input type="file" name="image" required>
+            <label for="character_source">Fonte do personagem:</label>
+            <input type="text" name="character_source" required>
 
-        <label for="audio">Áudio da apresentação:</label>
-        <input type="file" name="audio" required>
+            <label for="image">Imagem de referência:</label>
+            <input type="file" name="image" required>
 
-        
+            <label for="audio">Áudio da apresentação:</label>
+            <input type="file" name="audio" required>
 
-        <input type="submit" value="Confirmar inscrição"
+            <input type="submit" value="Confirmar inscrição"
+        </div>
     </form>
 </body>
 </html>

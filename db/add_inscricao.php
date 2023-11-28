@@ -5,6 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $instagram = $_POST["instagram"];
     $character_name = $_POST["character_name"];
     $character_source = $_POST["character_source"];
+    $concurso_id = $_POST["concurso_id"];
 
     // Upload de arquivos
     $image_path = '../files/inscricao_img'; // pasta de imagens
@@ -20,10 +21,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     include("conn.php");
 
-    $sql = "INSERT INTO Participantes (nome_completo, nome_artistico, instagram, nome_personagem, fonte_personagem, imagem_referencia, audio_apresentacao)
-            VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO Participantes (concurso_id, nome_completo, nome_artistico, instagram, nome_personagem, fonte_personagem, imagem_referencia, audio_apresentacao)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param('sssssss', $name, $artistic_name, $instagram, $character_name, $character_source, $image_path, $audio_path);
+    $stmt->bind_param('ssssssss', $concurso_id, $name, $artistic_name, $instagram, $character_name, $character_source, $image_path, $audio_path);
     $stmt->execute();
 
     if ($stmt->affected_rows > 0) {
