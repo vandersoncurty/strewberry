@@ -1,4 +1,5 @@
 <?php
+session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
     $instagram = $_POST["instagram"];
@@ -7,11 +8,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //$event_date = $_POST["event_date"];
     $final_date = $_POST["final_date"];
     //$max_competitors = $_POST["max_competitors"];
+    $user_id = $_SESSION['user_id'];
 
     // Inserindo dados em Concursos
     include "conn.php";
-    $stmt = $conn->prepare("INSERT INTO Concursos (nome, instagram, descricao, regulamento, data_encerramento) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param('sssss', $name, $instagram, $description, $rules, $final_date);
+    $stmt = $conn->prepare("INSERT INTO Concursos (usuario_id, nome, instagram, descricao, regulamento, data_encerramento) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param('ssssss', $user_id, $name, $instagram, $description, $rules, $final_date);
     $stmt->execute();
 
     // Verifica se inseriu corretamente

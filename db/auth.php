@@ -17,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $row["senha"])) {
             session_start();
             $_SESSION['email'] = $email;
+            $_SESSION['user_id'] = $row['usuario_id'];
             header("Location: ../includes/inicio.php");
             $stmt->close();
             $conn->close();
@@ -24,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
     
-    header("Location: ../includes/login.php?error=1");
+    header("Location: ../index.php?error=1");
     $stmt->close();
     $conn->close();
     exit();

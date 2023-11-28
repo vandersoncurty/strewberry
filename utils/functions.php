@@ -11,4 +11,10 @@ function getConcurso($concursoId, $conn) {
 
     return $concurso;
 }
+
+function getConcursosInicio($userId, $conn) {
+    $sql = "SELECT * FROM Concursos WHERE usuario_id = $userId";
+    $result = $conn->query($sql);
+    return $result;
+}
 ?>
