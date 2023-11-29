@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($stmt->affected_rows > 0) {
         // Pega o ID do concurso
         $concurso_id = $stmt->insert_id;
-        $link_concurso = "localhost/strewberry/inscricao.php?id=" . $concurso_id;
+        $link_concurso = "localhost/strewberry/concursos/inscricao.php?id=" . $concurso_id;
 
         // membros da staff
         $stmt = $conn->prepare("INSERT INTO membrosstaff (concurso_id, email, funcao) VALUES (?, ?, ?)");
