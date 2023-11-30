@@ -18,7 +18,7 @@
         echo "<ul>";
         foreach ($participantes as $participante) {
             echo "<li>";
-            echo "Nome: " . $participante['nome'] . " - ";
+            echo "Nome: " . $participante['nome_completo'] . " - ";
             echo "Personagem: " . $participante['nome_personagem'];
             echo "</li>";
         }

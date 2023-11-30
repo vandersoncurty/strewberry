@@ -31,3 +31,17 @@ function getParticipantes($id_concurso, $conn) {
     }
     return $participantes;
 }
+
+function getParticipanteById($id_participante, $conn) {
+    $participante = array();
+
+    $sql = "SELECT * FROM participantes WHERE participante_id = $id_participante";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $participante[] = $row;
+        }
+    }
+    return $participante;
+}
