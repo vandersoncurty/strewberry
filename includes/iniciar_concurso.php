@@ -1,3 +1,4 @@
+<div class="concurso_lista">
 <?php
 include("../utils/functions.php");
 include("../db/conn.php");
@@ -16,3 +17,4 @@ echo '<div>';
     }
     echo "</ul></div>";
 ?>
+</div>

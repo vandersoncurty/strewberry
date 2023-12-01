@@ -1,4 +1,4 @@
-<div>
+<div class="detalhes_concurso">
     <?php
     include("../utils/functions.php");
     include("../db/conn.php");

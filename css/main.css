@@ -1,8 +1,3 @@
-.error-message {
-    color: red;
-    font-weight: bold;
-}
-
 body {
     font-family: 'Arial', sans-serif;
     background-color:darkcyan;
@@ -10,7 +5,27 @@ body {
     padding: 0;
 }
 
-#content {
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/**************************/
+/**********HEADER**********/
+.header {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.header a {
+    color: white; 
+    text-decoration: none; 
+    margin: 0 15px;
+}
+/****************************************/
+/*************LOGIN/REGISTRO*************/
+.auth {
     max-width: 400px;
     margin: 100px auto;
     padding: 20px;
@@ -19,6 +34,181 @@ body {
     border-radius: 8px;
 }
 
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+.auth form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth label {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.auth input {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.auth button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.auth button:hover {
+    background-color: #45a049;
+}
+/***************************************/
+/****************TELA INICIAL***********/
+.card_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    width: 300px;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.card p {
+    color: #555;
+}
+
+.card a {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #0342ff;
+    font-weight: bold;
+}
+/***************************************/
+/************DETALHES CONCURSO**********/
+.detalhes_concurso {
+    max-width: 90%;
+    margin: 15px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.847);
+    text-align: center;
+}
+
+.detalhes_concurso h1 {
+    margin-top: 0;
+    color: #333;
+}
+
+.detalhes_concurso p {
+    color: #555;
+}
+
+.detalhes_concurso label {
+    display: block;
+    margin-top: 15px;
+    color: #333;
+}
+
+.detalhes_concurso input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.detalhes_concurso div {
+    margin-top: 20px;
+}
+
+.detalhes_concurso h3 {
+    color: #333;
+}
+
+.detalhes_concurso ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.detalhes_concurso li {
+    margin-bottom: 8px;
+}
+
+.detalhes_concurso button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.detalhes_concurso button:hover {
+    background-color: #45a049;
+}
+/***************************************/
+/************INICIAR CONCURSO***********/
+.concurso_lista {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.847);
+}
+
+.concurso_lista h1 {
+    text-align: center;
+    color: #333;
+}
+
+.concurso_lista ul {
+    list-style: none;
+    padding: 0;
+}
+
+.concurso_lista li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.concurso_lista li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.concurso_lista li:hover {
+    background-color: #4caf50;
+}
+/***************************************/
+/***************INSCRICAO***************/
 #inscricao {
     max-width: 600px;
     margin: 100px auto;
@@ -28,7 +218,13 @@ body {
     border-radius: 8px;
 }
 
-.form_style input {
+#info_inscricao {
+    background-color: rgba(255, 255, 255, 0.153);
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.inscricao_form input {
     padding: 10px;
     margin-bottom: 10px;
     margin-top: 5px;
@@ -37,38 +233,71 @@ body {
     border-radius: 4px;
 }
 
-h1 {
+.inscricao_form input[type="submit"]{
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.inscricao_form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+/***************************************/
+/***************AVALIACAO***************/
+.avaliacao-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.avaliacao_container h1 {
     text-align: center;
     color: #333;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+.avaliacao_container img {
+    max-width: 60%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+    margin: auto;
+    display: block;
+    
 }
 
-label {
+.avaliacao_form {
+    margin-top: 20px;
+}
+
+.avaliacao_form label {
+    display: block;
     margin-bottom: 8px;
     color: #333;
 }
 
-input {
+.avaliacao_form input {
     padding: 10px;
     margin-bottom: 16px;
-    border: 1px solid black;
+    border: 1px solid #ddd;
     border-radius: 4px;
 }
 
-button {
-    padding: 10px;
+.avaliacao_form input[type="submit"] {
     background-color: #4caf50;
-    color: black;
-    border: none;
-    border-radius: 4px;
+    color: white;
     cursor: pointer;
 }
 
-button:hover {
+.avaliacao_form input[type="submit"]:hover {
     background-color: #45a049;
 }
-
+/***************************************/
+/***************************************/

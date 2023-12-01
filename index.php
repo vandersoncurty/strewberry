@@ -9,7 +9,7 @@
     <script src='js/main.js'></script>
     </head>
     <body>
-        <div id="content">
+        <div id="content" class="auth">
         <?php
 		//conteudo das páginas XmlHTTPRequestt
         if (isset($_GET['page'])) {

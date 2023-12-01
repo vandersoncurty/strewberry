@@ -18,9 +18,9 @@
     $concurso = getConcurso($concursoId, $conn);
     ?>
 
-    <form class="form_style" method="POST" action="../db/add_inscricao.php" enctype="multipart/form-data" name="registration">
+    <form class="inscricao_form" method="POST" action="../db/add_inscricao.php" enctype="multipart/form-data" name="registration">
 
-        <div>
+        <div id="info_inscricao">
             <h1><?php echo $concurso['nome']; ?></h1>
             <p><?php echo $concurso['descricao']; ?></p>
             <p>Saiba mais no instagram: <?php echo $concurso['instagram']; ?></p>
