@@ -103,6 +103,47 @@ h1 {
     color: #0342ff;
     font-weight: bold;
 }
+/****************************************/
+/*************CRIAR CONCURSO*************/
+.criar_concurso {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 8px;
+}
+
+.criar_concurso form {
+    display: flex;
+    flex-direction: column;
+}
+
+.criar_concurso label {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.criar_concurso input {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.criar_concurso button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+.criar_concurso button:hover {
+    background-color: #45a049;
+}
 /***************************************/
 /************DETALHES CONCURSO**********/
 .detalhes_concurso {

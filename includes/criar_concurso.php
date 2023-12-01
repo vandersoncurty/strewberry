@@ -1,4 +1,4 @@
-<div>
+<div class="auth">
     <form method="POST" action="../db/add_concurso.php" name="criar_concurso">
     <h2>Dados básicos:</h2>
         <label for="name">Nome do evento:</label>

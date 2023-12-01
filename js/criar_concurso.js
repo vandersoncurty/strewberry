@@ -4,14 +4,26 @@ function addMember() {
 
   container.innerHTML = 
     `
-    <label for="email">E-mail:</label>
-    <input type="email" name="emails" required>
-    
-    <label>Função:</label>
-    <label><input type="radio" name="permissions[${getNextMemberIndex()}]" value="jurado">Jurado</label>
-    <label><input type="radio" name="permissions[${getNextMemberIndex()}]" value="djmc">DJ/MC</label>
-
-    <button type="button" onclick="removeMember(this)">Remover</button>
+    <table>
+      <tr>
+        <label for="email">E-mail:</label>
+        <input type="email" name="emails" required>
+      </tr>
+      <tr>
+        <td>
+          <p>Função:</p>
+        </td>
+        <td>
+          <label><input type="radio" name="permissions[${getNextMemberIndex()}]" value="jurado">Jurado</label>
+        </td>
+        <td>
+          <label><input type="radio" name="permissions[${getNextMemberIndex()}]" value="djmc">DJ/MC</label>
+        </td>
+      </tr>
+      <tr>
+        <button type="button" onclick="removeMember(this)">Remover</button>
+      </tr>
+    </table>
     `;
 
   document.getElementById("staff_container").appendChild(container);
